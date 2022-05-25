@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>增删改查</title>
+</head>
+<body>
+<form th:action="@{/emp/add}" method="post">
+    姓氏:<input type="text" name="lastName"><br>
+    邮箱:<input type="email" name="email"><br>
+    男:<input type="radio" name="gender" value="0"><br>
+    女:<input type="radio" name="gender" value="1"><br>
+    <input type="submit" value="添加">
+</form>
+<form th:action="@{/emp/update}" method="post">
+    姓氏:<input type="text" name="lastName"><br>
+    邮箱:<input type="email" name="email"><br>
+    男:<input type="radio" name="gender" value="0"><br>
+    女:<input type="radio" name="gender" value="1"><br>
+    id:<input type="number" name="id"><br>
+    <input type="submit" value="修改">
+</form>
+<form th:action="@{/emp/findById}" method="get">
+    id:<input type="number" name="id">
+    <input type="submit" value="查询">
+</form>
+<form th:action="@{/emp/removeById}" method="get">
+    <input type="number" name="id">
+    id:<input type="submit" value=删除>
+</form>
+</body>
+</html>
